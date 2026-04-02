@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import './App.css';
 import { BACKENDURL, callApi } from './lib';
 
 const App = () => {
