@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+.app{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #a6cbe1, #ffffff);
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    display: grid;
+    grid-template-rows: 50px auto 40px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+.app .panel{
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app .panel h3{
+    padding: 0;
+    margin: 5px;
+    text-align: center;
 }
-
-.card {
-  padding: 2em;
+.app .panel legend{
+    margin-top: 10px;
 }
+.app .panel input{
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 30px;
+}
+.app .panel button{
+    border: none;
+    background: dodgerblue;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.app .header{
+    line-height: 50px;
+    font-size: 14pt;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.app .section{
+    overflow: auto;
+}
+.app .section table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.app .section table thead{
+    background: dodgerblue;
+    color: white;
+}
+.app .section table tr{
+    height: 30px;
+}
+.app .section table tr:nth-child(even){
+    background: rgb(0, 0, 0, 0.1);
+}
+.app .section table tr th,td{
+    border: 1px solid #ccc;
+    padding: 0 3px;
+}
+.app .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    border-top: 1px solid #ccc;
+}
+.app .footer button{
+    border: none;
+    background: dodgerblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 30px;
+}
+.app .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.2);
 
-.read-the-docs {
-  color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app .overlay label{
+    font-size: 16pt;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
 }
